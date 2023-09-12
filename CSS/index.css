@@ -25,7 +25,7 @@ header{
     height: 80px;
 	/* position: fixed; */
 	z-index:1;
-	background-image: url(C:Users/dorit/Documents/optica/Página/IMG/header.jpg);
+	background-image: url(RoxetHonguito.github.io/IMG/header.jpg);
 	background-size: cover;
 }
 
@@ -35,7 +35,7 @@ header{
 	padding: 0;
 	margin:0 10%;
 	position: absolute;
-	background-image: url(C:Users/dorit/Documents/optica/Página/IMG/header.jpg);
+	background-image: url(RoxetHonguito.github.io/IMG/header.jpg);
 	background-size: cover;
 
 }
