@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-color: rgb(15,1,1);
+    color: #fff;
+    height: 150px;
+}
+
+
+.LOGO{
+	width:100%;
+	height: 150px;
+	padding: 0;
+	margin:0;
+	position: absolute;
+}
+
+.LOGO_img{
+	width:150px;
+	height:80px;
+	position: absolute;
+	left: 650px;
+	top: 10px;
+}
+
+.menu{
+    position: absolute;
+	width: 100%;
+	height: 60px;
+	top: 80px;
+	padding: 1%;
+	margin: 0;
+	display:flex;
+	justify-content: center;
+}
+
+.menu_menor{
+	position: relative;
+	left:90%;
+	width: 8%;
+	padding: 1%;
+	margin: 0%;
+}
+
+.Menu_Desplegable{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+
+hr{
+	height: 3px;
+	width:40%;
+	background-color: #fff;
+	margin-left:30%;
+	margin-top: 123px;
+	position:absolute;
+	}
+
+
+.Menu_Opciones{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.Menu_Opciones:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.Menu_Desplegable_Interno{
+	z-index: 2;
+    list-style: none;
+    transition:clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #000;
+}
+
+.menu__link{
+    color: #fff;
+	font-size: 18px;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.menu__link:hover{
+    background-color: #5e7094;
+}
+
+.Principal{
+	display: inline-block;
+	width: 100%;
+	background-color: #134444;
+}
+
+.Cuerpo_1{
+	height: 100%;
+	width:73%;
+	padding: 1%;
+	/* background: green; */
+	position: absolute;
+	padding-left:200px;
+}
+
+.Cuerpo_2{
+	position: relative;
+	left:75%;
+	width: 23%;
+	height: 100vh;
+	padding-right: 100px;
+	margin: 1%;
+	/* background: yellow; */
+}
+
+.PPag{
+	background-color: rgb(15,1,1);
+	width: 100%;
+	height: 40px;
+	padding: 1%;
+	text-align: center;
+	color: #fff;
+}
+
+
+/* Galeria */
+.Galeria_superior{
+	width: 600px;
+	height: 400px;
+	overflow:hidden;
+	margin: 1% auto 1% auto;
+	position: relative;
+}
+
+.Carousell{
+	display: flex;
+	width: 500%;
+	height: 100%;
+}
+
+.Caja{
+	width: cal(100%/5);
+	height: 100%;
+}
+
+.Caja img{
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	object-fit: cover;
+}
+
+.B_Izq,
+.B_Der{
+	display: flex;
+	position: absolute;
+	top: 50%;
+	font-size: 2.5rem;
+	background-color: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+	color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+	z-index: 3;
+}
+
+.B_Izq:hover,
+.B_Der:hover{
+	background-color: #333333d4;
+    color: #fff;
+}
+
+.B_Der{
+	right:2px;
+}
+.B_Izq{
+	left:2px;
+}

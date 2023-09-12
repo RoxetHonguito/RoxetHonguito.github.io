@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dosis:wght@500;700&family=Handjet:wght@300&display=swap');
+*{
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+}
+
+body {
+	font-family: 'Signika Negative', sans-serif;
+	}
+
+header{
+	background-color: #2d2d39;
+    color: #fff;
+	width: 100%;
+	/* position: fixed; */
+	z-index: 3;
+}
+
+.Encabezado{
+    height: 180px;
+}
+
+.EncabezadoP{
+    height: 80px;
+	/* position: fixed; */
+	z-index:1;
+	background-image: url(C:Users/dorit/Documents/optica/Página/IMG/header.jpg);
+	background-size: cover;
+}
+
+.LOGO{
+	width:80%;
+	height: 180px;
+	padding: 0;
+	margin:0 10%;
+	position: absolute;
+	background-image: url(C:Users/dorit/Documents/optica/Página/IMG/header.jpg);
+	background-size: cover;
+
+}
+
+.LOGO_img{
+	width:250px;
+	height:110px;
+	margin: 10px auto;
+	display: flex;
+	align-items: center;
+}
+
+/* Menu computadora */
+nav{
+	width: 100%;
+	padding: 1%;
+	margin: 0;
+	display:flex;
+	justify-content: center;
+}
+
+.Menu{
+	top: 120px;
+	position: absolute;
+}
+
+.menu_menor{
+	position: relative;
+	left:90%;
+	width: 8%;
+	padding: 1%;
+	margin: 0.5% 1%;
+	align-items: center;
+	cursor: pointer;
+	display: none; /* Solo se ocupa en dimensiones menores*/
+}
+
+.menu_img{
+	display:block;
+}
+
+.Menu ul{
+	list-style-type:none;
+	justify-content:space-between;
+}
+
+.Menu_Desplegable{
+	z-index:3;
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+
+hr{
+	height: 5px;
+	width:35%;
+	background-color: #000;
+	margin-top: 30px;
+	position:absolute;
+	}
+
+.hrP{
+	margin-top: 50px;
+}
+
+/*Opcion para submenu*/
+
+.Menu_Opciones{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.Menu_Opciones:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /*Custom property definida por el usuario. aquí usamos clippy*/
+    --transform: rotate(0);
+	border-left: 5px solid;
+}
+
+/*Configuración de la flecha en el submenú*/
+
+.menu__arrow{
+    transform: var(--transform); /*La función var() utiliza la clippy definida antes*/
+    transition: transform .5s;
+    display: block;
+    margin-left: 3px;
+}
+
+/*Configuración del despliegue en el submenú*/
+
+.Menu_Desplegable_Interno{
+    list-style: none;
+    transition:clip-path .5s;
+    clip-path: var(--clip);
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%);
+	background-color: #000;
+}
+
+.Menu_Opciones_Interno a{
+	padding: 10px 80px 10px 20px;
+	border-left: 5px solid;
+	margin-left: 10px;
+}
+
+
+/*Diseño del submenú*/
+
+.menu_link{
+    color: #fff;
+    text-decoration: none;
+	font-family: 'Dosis', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+    padding: 2px 20px;
+    display: flex;
+    height: auto;
+    align-items: center;
+}
+
+.menu_link:hover{
+    background-color: #5A5353;
+	background-size: 70px;
+}
+
+.menu_link_interno{
+	color: #fff;
+}
+
+main{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	background: repeating-radial-gradient(#000 1%,#010a14 0 0.0002%) 60% 0/2463px 2500px, /* Esto nos permite generar ruido en el color de fondo */
+    repeating-conic-gradient(#000 0 0.0001%,#0A2F54 0 0.0002%) 60% 60%/2500px 2500px;
+	background-blend-mode: difference;
+	animation: b .2s infinite alternate;
+	min-height: 800px;
+}
+
+.PrincipalP{
+	padding-top: 30px;
+}
+
+
+/* Galeria */
+.Galeria_superior{
+	width: 800px;
+	height: 400px;
+	overflow:hidden;
+	margin: 1% auto 1% auto;
+	position: relative;
+	box-shadow: 10px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.Carousell{
+	display: flex;
+	width: 500%;
+	height: 100%;
+	
+}
+
+.Caja{
+	width: 20%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.Caja h3{
+	display: flex;
+    position: absolute;
+    margin: 20px;
+	font-family: 'Dosis';
+    font-size: 25px;
+    color: #e3e2d7;
+    -webkit-text-stroke: 1px black;
+}
+
+.Caja img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.B_Izq,
+.B_Der{
+	display: flex;
+	position: absolute;
+	top: 50%;
+	font-size: 2.5rem;
+	background-color: transparent;
+	border-radius: 50%;
+	cursor: pointer;
+	color: #ffffff81;
+    transform: translate(0,-50%);
+    transition: .5s ease;
+	z-index: 1;
+}
+
+.B_Izq:hover,
+.B_Der:hover{
+	background-color: #333333d4;
+    color: #fff;
+}
+
+.B_Der{
+	right:2px;
+}
+.B_Izq{
+	left:2px;
+}
+
+
+.Cuerpo_1{
+	width:70%;
+	padding: 2% 1% 1% 10%;
+	color: #fff;
+}
+
+.Cuerpo_2{
+	width: 30%;
+	padding: 2% 10% 1% 1%;
+	position: fixed;
+	margin-left: 70%;
+}
+
+.PPag{
+	background-color: rgb(15,1,1);
+	color: #fff;
+	width: 100%;
+	height: 90px;
+	padding: 20px 150px;
+	display: flex;
+}
+
+/* Principal */
+.video{
+	margin: 2%;
+	display: flex;
+	justify-content: center;
+}
+
+.Cuerpo_1 h1{
+	color: white; 
+	text-align: center;
+}
+
+.Cuerpo_1 h3, p{
+	color: white; 
+	text-align: justify;
+}
+
+
+/* Barra lateral */
+.aside{
+	border: 2px solid #000;
+	margin-bottom: 10px;
+	text-align: center;
+	font-family: 'Handjet', cursive;
+	background:linear-gradient(to top, #313328, #fff);
+	
+}
+
+.Contador{
+	text-align: center;
+	margin: 10px 10px;
+	display: flex;
+	justify-content: center;
+	height: 140px;
+}
+
+.Contador h3{
+	position: absolute;
+	font-family: 'Amatic SC', cursive;
+	font-size: 25px;
+	color: #fff;
+}
+
+.Asid_Tex{
+	font-family: 'Amatic SC', cursive;
+	font-size: 20px;
+	color: #fff;
+	padding:10px;
+	text-align: center;
+}
+
+.Cuerpo_2 ul{
+	list-style: none; 
+	color: #fff;
+	font-family:'Dosis', sans-serif;
+	text-align: justify;
+	font-size: 22px;
+}
+.Cuerpo_2 li{
+	padding: 8px;
+	text-align: justify;
+}
+
+.Cuerpo_2 li:hover{
+	cursor: pointer;
+	-webkit-text-stroke: 0.5px #000;
+	color: #fff;
+}
+
+.Cont_Borde{
+	width: 25%;
+	height: 80px;
+	display: grid;
+}
+
+.Cont_Borde h2{
+	font-size: 80%;
+	text-align: center;
+}
+
+.Contador_Opc{
+	background-color: #a9ae8d;
+	display: flex;
+	border: 2px solid #000;
+	border-radius:15px;
+	padding: 7px;
+	height: 100px;
+	width: 100%;
+	top: 35px;
+	position: relative;
+}
+
+.tiempo{
+	font-size: 28px;
+	margin-bottom:10px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.QRfCiencias{
+	object-fit: cover;
+	width: 80%;
+	display: flex;
+	margin: 0 auto;
+}
+
+.QR{
+	width: 100%;
+	height: auto;
+	margin: 10px 0;
+}
+/* manuales */
+
+.Album{
+	flex-wrap: wrap;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+.Foto{
+	width: 330px;
+	height: 330px;
+	border-radius: 10% 2%;
+	box-shadow: 10px 2px 2px rgba(0, 0, 0, 0.4);
+	margin: 20px;
+	text-align: center;
+	transition: all 0.25s;
+	background-color: rgb(190 190 189);
+
+}
+
+.F2{
+	width: 330px;
+	height: 230px;
+	overflow: hidden;
+}
+
+.F2 img{
+	height: 100% !important;
+    width: 100% !important;
+}
+
+.Foto:hover{
+	transform: translateY(-10px);
+	box-shadow: 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.Foto img{
+	object-fit: cover;
+	width: 330px;
+	height: 230px;
+}
+
+.Foto h4{
+	font-size:18px;
+	padding: 0 1rem;
+}
+
+.Foto p{
+	padding: 0 1rem;
+	font-size:10px;
+	font-weight: 300;
+	color: #030b24;
+}
+
+.Foto a{
+		text-decoration:none;
+		color: rgba(0, 0, 0, 0.8);
+	}
+
+.Foto a:hover{
+		text-decoration:none;
+		color: #476666;
+	}
+
+
+/* Curso */
+
+.Ev ul, 
+.Tem ul{
+	text-align: center;
+	list-style: none;
+}
+
+.Ev h3, 
+.Tem h3{
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	font-size: 36px;
+	border: 2px solid #fff;
+	margin: 10px auto;
+	width: 50%;
+}
+
+.Ev li, .Tem li{
+	font-family: 'Dosis';
+	font-size: 24px;
+	-webkit-text-stroke: 1px black;
+}
+
+.Ev p{
+	font-family: 'Dosis';
+	font-size: 18px;
+}
+
+.cajah3{
+	
+}
+
+
+/* Radiometría */
+table{
+	margin: 15px auto;
+	width: 200px;
+	text-align: center;
+	color: #000;
+}
+
+#Datos{
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+}
+
+#Datos ul{
+	list-style: none;
+	display: flex;
+}
+
+#Datos li{
+	list-style: none;
+	display: flex;
+	margin: 0 5px;
+}
+
+#Datos label{
+	padding: 0 10px;
+	font-size: 16px;
+}
+
+
+.Boton{
+	width: 100px;
+	height: 45px;
+	font-family: 'Handjet', cursive;
+	font-size: 18px;
+	font-weight: 900;
+	border-radius: 5px;
+	transition: all 0.25s;
+	cursor: pointer;
+	}
+	
+.Boton:hover{
+	transform: translateY(-5px);
+}
+
+.Botonc{
+	text-align: center;
+	}
+
+/* Redes */
+
+.Text_PP{
+	align-items:center;
+	display: flex;
+}
+
+.Redes{
+	margin-left: 900px;
+}
+
+.Redes-icon{
+	display: inline-block;
+	margin-left: 20px;
+	width: 60px;
+	height:60px;
+	border-radius: 50%;
+	text-align:center;
+	color: #fff;
+}
+
+.Redes-icon:hover{
+	background: #e2fdf5;
+	color: #000;
+}
+
+.Redes-icon i{
+	font-size: 30px;
+	line-height: 60px;
+}
+
+/* Pendiente Menu 800px */
+@media (max-width: 1000px){  
+	.Encabezado{
+		height: 100px;
+	}
+	
+	hr{
+		visibility: hidden;
+	}
+	
+	.LOGO{
+		height: 100px;
+		position: absolute;
+		align-items: center;
+		display: flex;
+	}
+	
+	.LOGO_img{
+	width:150px;
+	height:80px;
+	margin: 0px auto 0 auto;
+	}
+	
+	.menu_menor{
+		display: flex;
+		margin: 0;
+		height:100px;
+		align-items: center;
+	}
+	
+	.Menu{
+		z-index: 2;
+		/* overflow: hidden; */
+	}
+	
+	.Menu_Desplegable{
+		position: fixed;
+		display: grid;
+        grid-auto-rows: max-content;
+		max-width: 200px;
+		width:100%;
+		top: 0;
+		bottom: 0;
+		right:10%;	
+		overflow-y: auto;
+		background-color:  #37392d;
+		transform: translate(150%);
+
+	}
+	
+	.Menu_Des_Desp{
+		transform: unset;
+		width: 100%;
+		/* overflow: hidden; */
+	}
+	
+	.menu_link{
+		padding: 25px 15px;
+	}
+	
+	.menu__arrow{
+		margin-left: auto;
+	}
+	
+	.Menu_Desplegable_Interno{
+		position: unset;
+		transform: translateY(0);
+		background-color: #89895d;
+		width: 100%;
+		display: grid;
+		height: 0;
+		transition: height .5s;
+	}
+	
+	.menu_link_interno{
+		width: 90%;
+		margin-left: auto;
+		borde-left: 1px solid;
+	}
+	
+	.Menu_Opciones{
+		--clip:0;
+		overflow: hidden; 
+		/* width: 200px; */
+		/* height: auto; */
+	}
+	
+	.Menu_Opciones:hover{
+		border-left: 0 solid;
+	}
+	
+	.Menu_Opciones_act{
+		--transform: rotate(0);
+		--background: #6ABCF4;
+	}
+	
+	.Menu_Opciones_Desp{
+		background-color: var(--background);
+	}
+	
+	/* Galeria superior */
+	.Galeria_superior{
+	width: 400px;
+	height: 200px;
+	}
+	
+	main{
+	display: flex;
+	width: 100%;
+	}
+	
+	.Cuerpo_1{
+	width:100%;
+	padding: 2% 1% 1% 5%;
+	color: #fff;
+	}
+	
+	.Cuerpo_2{
+	width: 100%;
+	padding: 0 40%;
+	}
+	
+	#Datos label{
+	font-size: 80%;
+	}
+	
+}
+	
+	
