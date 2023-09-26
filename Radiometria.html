@@ -45,46 +45,10 @@
 		</div>
 		
 		<div class = "Lector">
-			<embed  src="Pdfs/Radiometría-2023.pdf" type="application/pdf"  width="80%" height="600px" style="
+			<embed  src="Pdfs/Radiometría-2023.pdf" type="application/pdf"  width="110%" height="700px" style="
     margin: 0 auto; display: flex"/>
 		</div>
 		
-		<p style = "text-align: center; font-size: 18px;" >Ingresa tus datos dejando un espacio entre estos. En caso de que los arreglos de Posición y
-			Voltaje sean de diferente longitud se mandará una alerta. Dar click en cargar para mostrar el resultado y la gráfica en la parte inferior:</p>
-			
-		<form id = "Datos">
-			<ul>
-				<li>
-					<label>Tipo de fuente</label>
-					<input type= "text" id = "Tit" name="Titulo"/>
-				</li>
-				<li>
-					<label for= "Pos">Posición (mm):</label>
-					<input type= "text" id = "Pos" name="Pos_Rad"/>
-				</li>
-				<li>
-					<label for= "Vol">Voltaje (V):</label>
-					<input type= "text" id = "Vol" name="Vol_Rad"/>
-				</li>
-			</ul>
-		</form>
-		
-		<div class = "Botonc"><input type="button" onclick="LinRadiometria()" value="Cargar" class = "Boton"></div>
-		
-		<table class = "Inf" border = "1">
-			<caption style = "padding: 5px; background-color: white;">Resultados</caption>
-			<tr style = "background-color: white;">
-				<th>m</th>
-				<th>b</th>
-				<th>R^2</th>
-			</tr>
-			<tbody id="ValoresTab" style = "background-color: white;">
-				
-			</tbody>
-			</table>
-			
-		<div style = "text-align: center;"><canvas id="GrCanvas" style="border:1px solid grey; background-color: white;"></canvas></div>
-			
 		</section>
 		
 		<aside class = "Cuerpo_2">
