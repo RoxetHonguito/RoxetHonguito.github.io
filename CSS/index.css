@@ -261,10 +261,10 @@ main{
 }
 
 .Cuerpo_2{
-	width: 30%;
+	width: 20%;
 	padding: 2% 10% 1% 1%;
 	position: fixed;
-	margin-left: 70%;
+	margin-left: 80%;
 }
 
 .PPag{
@@ -299,9 +299,9 @@ main{
 	border: 2px solid #000;
 	margin-bottom: 10px;
 	text-align: center;
-	font-family: 'Handjet', cursive;
+	font-family: 'Dosis', sans-serif;
 	background:linear-gradient(to top, #313328, #fff);
-	
+	font-size: 15px;
 }
 
 .Contador{
@@ -332,7 +332,7 @@ main{
 	color: #fff;
 	font-family:'Dosis', sans-serif;
 	text-align: justify;
-	font-size: 22px;
+	font-size: 15px;
 }
 .Cuerpo_2 li{
 	padding: 8px;
