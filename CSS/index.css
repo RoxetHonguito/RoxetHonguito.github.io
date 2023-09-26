@@ -173,8 +173,7 @@ main{
 	flex-direction: row;
 	flex-wrap: wrap;
 	width: 100%;
-	background: repeating-radial-gradient(#000 1%,#010a14 0 0.0002%) 60% 0/2463px 2500px, /* Esto nos permite generar ruido en el color de fondo */
-    repeating-conic-gradient(#000 0 0.0001%,#0A2F54 0 0.0002%) 60% 60%/2500px 2500px;
+	background: #000;
 	background-blend-mode: difference;
 	animation: b .2s infinite alternate;
 	min-height: 800px;
@@ -297,11 +296,12 @@ main{
 /* Barra lateral */
 .aside{
 	border: 2px solid #000;
-	margin-bottom: 10px;
-	text-align: center;
-	font-family: 'Dosis', sans-serif;
-	background:linear-gradient(to top, #313328, #fff);
-	font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    background: linear-gradient(to top, #2f0404, #981717);
+    font-size: 15px;
+    color: #adae92;
 }
 
 .Contador{
